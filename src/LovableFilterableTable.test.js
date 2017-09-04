@@ -35,4 +35,38 @@ describe("LovableFilterableTable", () => {
       expect(wrapper.find("tbody > tr").exists()).toBe(false);
     });
   });
+
+  describe("when given items", () => {
+    const items = [
+      { id: 1, name: "Bitcoin" },
+      { id: 2, name: "Ethereum" },
+      { id: 3, name: "Zcash" }
+    ];
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <LoveableFilterbleTable items={items} schema={tableSchema} />
+      );
+    });
+
+    it("should render tr elements", () => {
+      expect(wrapper.find("tbody > tr").exists()).toBe(true);
+    });
+
+    it("should render the approriate number of tr elements", () => {
+      expect(wrapper.find("tbody > tr").length).toBe(3);
+    });
+
+    it("should include the title of each item", () => {
+      items.forEach(item => {
+        expect(
+          wrapper.containsMatchingElement(
+            <td>
+              {item.name}
+            </td>
+          )
+        ).toBe(true);
+      })
+    });
+  })
 })
