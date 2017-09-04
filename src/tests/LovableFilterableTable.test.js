@@ -4,10 +4,10 @@ import { shallow } from "enzyme";
 import fs from "fs";
 import path from "path";
 import serailizer from "jest-serializer-enzyme";
-import LoveableFilterbleTable from "./LovableFilterableTable";
-import { tableSchema } from "./App";
+import LoveableFilterbleTable from "../LovableFilterableTable";
+import { tableSchema } from "../App";
 
-const SAMPLE_RESPONSE_FILE = path.join(__dirname, "../sample-response.json");
+const SAMPLE_RESPONSE_FILE = path.join(__dirname, "../../sample-response.json");
 
 const generateItems = () => {
   const response = fs.readFileSync(SAMPLE_RESPONSE_FILE);
