@@ -9,7 +9,7 @@ import { tableSchema } from "./App";
 
 const SAMPLE_RESPONSE_FILE = path.join(__dirname, "../sample-response.json");
 
-const genereteItems = () => {
+const generateItems = () => {
   const response = fs.readFileSync(SAMPLE_RESPONSE_FILE);
   const json = JSON.parse(response);
 
@@ -91,7 +91,7 @@ describe("LovableFilterableTable", () => {
     let items;
 
     beforeEach(() => {
-      items = genereteItems();
+      items = generateItems();
       wrapper = shallow(
         <LoveableFilterbleTable items={items} schema={tableSchema} />
       );
@@ -134,5 +134,33 @@ describe("LovableFilterableTable", () => {
     it("should filter items <with serializer>", () => {
       expect(wrapper.find("tbody")).toMatchSnapshot();
     });
+
+    describe("users clears search query", () => {
+      beforeEach(() => {
+        const searchBox = wrapper.find("input");
+        searchBox.simulate("change", {target: {value: ""}});
+      });
+
+      it("should render all [items] again", () => {
+        expect(wrapper.find("tbody > tr").length).toEqual(items.length);
+      });
+    });
   });
+
+  // Not too awesome better to test against user behaviour/interaction/expectations
+  // describe("user entering search query <simulating vs setState()>", () => {
+  //   let items;
+
+  //   beforeEach(() => {
+  //     items = generateItems();
+  //     wrapper = shallow(<LoveableFilterbleTable items={items} schema={tableSchema} />);
+
+  //     wrapper.instance().updateFilter("coin", items); //instance returns JS instance of the component so we can access the JS function directly
+  //     wrapper.update();
+  //   });
+
+  //   it("should update state", () => {
+  //     expect(wrapper.state("matches").map(match => match.name)).toMatchSnapshot();
+  //   });
+  // });
 });

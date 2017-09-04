@@ -1,5 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LovableFilterableTable user entering search query <simulating vs setState()> should update state 1`] = `
+Array [
+  "Bitcoin",
+  "Ethereum",
+  "Bitcoin Cash",
+  "Ripple",
+  "Litecoin",
+  "NEM",
+  "Dash",
+  "Monero",
+  "IOTA",
+  "Ethereum Classic",
+  "NEO",
+  "BitConnect",
+  "OmiseGO",
+  "Qtum",
+  "Lisk",
+  "Stratis",
+  "Waves",
+  "Zcash",
+  "Tether",
+  "Hshare",
+  "Bytecoin",
+  "EOS",
+  "Stellar Lumens",
+  "BitShares",
+  "TenX",
+  "Steem",
+  "MaidSafeCoin",
+  "MCAP",
+  "Augur",
+  "Komodo",
+]
+`;
+
 exports[`LovableFilterableTable user entering search query render a subset of matching [items] 1`] = `"<tbody><tr><td class=\\"item-name\\" style=\\"padding:5px;\\">Bitcoin</td><td class=\\"item-symbol\\" style=\\"padding:5px;\\">BTC</td><td class=\\"item-price_usd\\" style=\\"padding:5px;\\">4325.64</td><td class=\\"item-percent_change_1h\\" style=\\"padding:5px;\\">0.69</td><td class=\\"item-percent_change_24h\\" style=\\"padding:5px;\\">-3.93</td><td class=\\"item-percent_change_7d\\" style=\\"padding:5px;\\">0.15</td><td class=\\"item-heart\\"><i class=\\"fa fa-heart-o\\" aria-hidden=\\"true\\"></i></td></tr><tr><td class=\\"item-name\\" style=\\"padding:5px;\\">Bitcoin Cash</td><td class=\\"item-symbol\\" style=\\"padding:5px;\\">BCH</td><td class=\\"item-price_usd\\" style=\\"padding:5px;\\">539.182</td><td class=\\"item-percent_change_1h\\" style=\\"padding:5px;\\">0.78</td><td class=\\"item-percent_change_24h\\" style=\\"padding:5px;\\">-5.51</td><td class=\\"item-percent_change_7d\\" style=\\"padding:5px;\\">-10.68</td><td class=\\"item-heart\\"><i class=\\"fa fa-heart-o\\" aria-hidden=\\"true\\"></i></td></tr><tr><td class=\\"item-name\\" style=\\"padding:5px;\\">Litecoin</td><td class=\\"item-symbol\\" style=\\"padding:5px;\\">LTC</td><td class=\\"item-price_usd\\" style=\\"padding:5px;\\">67.1049</td><td class=\\"item-percent_change_1h\\" style=\\"padding:5px;\\">3.17</td><td class=\\"item-percent_change_24h\\" style=\\"padding:5px;\\">-11.17</td><td class=\\"item-percent_change_7d\\" style=\\"padding:5px;\\">7.34</td><td class=\\"item-heart\\"><i class=\\"fa fa-heart-o\\" aria-hidden=\\"true\\"></i></td></tr><tr><td class=\\"item-name\\" style=\\"padding:5px;\\">Bytecoin</td><td class=\\"item-symbol\\" style=\\"padding:5px;\\">BCN</td><td class=\\"item-price_usd\\" style=\\"padding:5px;\\">0.00190874</td><td class=\\"item-percent_change_1h\\" style=\\"padding:5px;\\">-0.75</td><td class=\\"item-percent_change_24h\\" style=\\"padding:5px;\\">-4.33</td><td class=\\"item-percent_change_7d\\" style=\\"padding:5px;\\">23.88</td><td class=\\"item-heart\\"><i class=\\"fa fa-heart-o\\" aria-hidden=\\"true\\"></i></td></tr><tr><td class=\\"item-name\\" style=\\"padding:5px;\\">MaidSafeCoin</td><td class=\\"item-symbol\\" style=\\"padding:5px;\\">MAID</td><td class=\\"item-price_usd\\" style=\\"padding:5px;\\">0.594994</td><td class=\\"item-percent_change_1h\\" style=\\"padding:5px;\\">2.37</td><td class=\\"item-percent_change_24h\\" style=\\"padding:5px;\\">-12.48</td><td class=\\"item-percent_change_7d\\" style=\\"padding:5px;\\">-2.96</td><td class=\\"item-heart\\"><i class=\\"fa fa-heart-o\\" aria-hidden=\\"true\\"></i></td></tr></tbody>"`;
 
 exports[`LovableFilterableTable user entering search query should filter items <with serializer> 1`] = `
