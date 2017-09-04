@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { shallow } from "enzyme";
 import fs from "fs";
 import path from "path";
+import serailizer from "jest-serializer-enzyme";
 import LoveableFilterbleTable from "./LovableFilterableTable";
 import { tableSchema } from "./App";
 
@@ -17,6 +18,8 @@ const genereteItems = () => {
     isLoved: false
   }))
 }
+
+expect.addSnapshotSerializer(serailizer);
 
 describe("LovableFilterableTable", () => {
   it("renders without crashing <smoke test>", () => {
@@ -119,7 +122,17 @@ describe("LovableFilterableTable", () => {
             </td>
           )
         ).toBe(false);
-      })
+      });
+
+      expect(wrapper.find("tbody").first().html()).toMatchSnapshot();
+    });
+
+    it("should filter items", () => {
+      expect(wrapper.find("tbody > tr > .item-name").map(item => item.html())).toMatchSnapshot();
+    });
+
+    it("should filter items <with serializer>", () => {
+      expect(wrapper.find("tbody")).toMatchSnapshot();
     });
   });
 });

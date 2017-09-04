@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "fs": "^0.0.1-security",
+    "jest-serializer-enzyme": "^1.0.0",
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
