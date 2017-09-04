@@ -16,11 +16,23 @@ describe("LovableFilterableTable", () => {
     div);
   });
 
-  it("should still render search box", () => {
+  let wrapper;
+
+  describe("when given empty [items]", () => {
     const items = [];
-    const wrapper = shallow(
-      <LoveableFilterbleTable items={items} schema={tableSchema} />
-    );
-    expect(wrapper.find("input").exists()).toBe(true);
-  })
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <LoveableFilterbleTable items={items} schema={tableSchema} />
+      );
+    });
+
+    it("should still render search box", () => {
+      expect(wrapper.find("input").exists()).toBe(true);
+    });
+
+    it("should have no table rows", () => {
+      expect(wrapper.find("tbody > tr").exists()).toBe(false);
+    });
+  });
 })
